@@ -1,8 +1,9 @@
+from decimal import Decimal
 
 def get_valor_total(nome_categoria):
-    valor_total = 0
+    valor_total = Decimal('0')
     while True:
-        valor = float(input(f"Insira o valor da {nome_categoria}: "))
+        valor = Decimal(input(f"Insira o valor da {nome_categoria}: "))
         valor_total += valor
         mais_valores = input(f"Deseja inserir outro valor de {nome_categoria}? \n1:SIM\n2:NÃO ")
         if mais_valores.lower() == "1":
@@ -23,7 +24,7 @@ patrimonio_liquido = ativos - passivos
 resultado = receitas - despesas
 
 print("\nBalanço Patrimonial")
-print("Ativos: R$", ativos)
+print("Ativos: R$", patrimonio_liquido)
 print("Passivos: R$", passivos)
 print("Patrimônio Líquido: R$", patrimonio_liquido)
 print("Resultado do Exercício")
