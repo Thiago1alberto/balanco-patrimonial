@@ -1,5 +1,6 @@
 import unittest
 from decimal import Decimal
+from Balanço import balanço
 
 class TestBalanço(Balanço):
     def test_valor_total(self):
