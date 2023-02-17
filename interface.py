@@ -56,18 +56,22 @@ class BalançoGUI:
     def adicionar_ativo(self):
         self.adicionar_valor(self.ativos, self.ativos_entry)
         self.ativos_entry.focus()
+        print("Ativo adicionado!")
 
     def adicionar_passivo(self):
         self.adicionar_valor(self.passivos, self.passivos_entry)
         self.passivos_entry.focus()
-
+        print("Passivo adicionado!")
+        
     def adicionar_receita(self):
         self.adicionar_valor(self.receitas, self.receitas_entry)
         self.receitas_entry.focus()
-
+        print("Receita adicionada!")
+        
     def adicionar_despesa(self):
         self.adicionar_valor(self.despesas, self.despesas_entry)
         self.despesas_entry.focus()
+        print("Despesa adicionada!")
 
     def calcular_balanço(self):
         ativos = self.get_valor_total(self.ativos)
@@ -75,17 +79,32 @@ class BalançoGUI:
         receitas = self.get_valor_total(self.receitas)
         despesas = self.get_valor_total(self.despesas)
 
+        if any(valor is None for valor in [ativos, passivos, receitas, despesas]):
+            return
+
         patrimonio_liquido = ativos - passivos
         resultado = receitas - despesas
 
         messagebox.showinfo("Resultado", f"Patrimônio líquido: {patrimonio_liquido}\nResultado: {resultado}", parent=self.master)
-
+        print("Balanço calculado!")
+        
     def adicionar_valor(self, lista, entry):
         lista.append(entry.get())
         entry.delete(0, tk.END)
+        messagebox.showinfo("Valor inserido", f"Valor {entry.get()} inserido com sucesso!", parent=self.master)
 
     def adicionar_ativo(self):
-        self.adicionar_valor(self.ativos, self.ativo_entry)
+        self.adicionar_valor(self.ativos, self.ativos_entry)
+
+    def get_valor_total(self, lista):
+        total = 0
+        for valor in lista:
+            try:
+                total += float(valor)
+            except ValueError:
+                messagebox.showerror("Erro", f"O valor {valor} não pode ser convertido em número.")
+                return None
+        return total
 
 if __name__ == '__main__':
     root = tk.Tk()
