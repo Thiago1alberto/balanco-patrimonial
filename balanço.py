@@ -21,19 +21,13 @@ def get_valor_total(nome_categoria):
 
 ativos = get_valor_total("Ativo")
 passivos = get_valor_total("Passivo")
-receitas = get_valor_total("Receita")
-despesas = get_valor_total("Despesa")
+patrimonio_liquido = get_valor_total("patrimonio liquido")
 
-patrimonio_liquido = ativos - passivos
-resultado = receitas - despesas
+
+patrimonio_liquido
 
 print("\nBalanço Patrimonial")
-print(f"Ativos: R$ {patrimonio_liquido:.2f}")
+print(f"Ativos: R$ {ativos:.2f}")
 print(f"Passivos: R$ {passivos:.2f}")
 print(f"Patrimônio Líquido: R$ {patrimonio_liquido:.2f}")
-print("Resultado do Exercício:")
 
-if resultado > 0:
-    print(f"Lucro: R$ {resultado:.2f}")
-else:
-    print(f"Prejuízo: R$ {resultado:.2f}")
