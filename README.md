@@ -1,5 +1,5 @@
-# Balanço Patrimonial e o Resultado do Exercício. # 
-Este código é um exemplo de como calcular o Balanço Patrimonial e o Resultado do Exercício de uma empresa. Ele permite que o usuário insira os valores de ativos, passivos, receitas e despesas, e, em seguida, calcula e exibe o patrimônio líquido e o resultado do exercício.
+# Balanço Patrimonial # 
+Este código é um exemplo de como calcular o Balanço Patrimonial de uma empresa. Ele permite que o usuário insira os valores de ativos, passivos e o patrimônio líquido.
 
 # Como usar: #
 - Abra o arquivo em um ambiente Python (como IDLE, PyCharm ou Jupyter Notebook)
