@@ -18,4 +18,4 @@ Este código é um exemplo de como calcular o Balanço Patrimonial de uma empres
 - O código não realiza o arredondamento adequado, o que pode levar a discrepâncias nos valores finais.
 
 # Contribuindo: #
-Contribuições são bem-vindas! Sinta-se à vontade para enviar sugestões ou correções de erros por meio de pull requests ou issues no repositório.
+Contribuições são bem-vindas! Sinta-se à vontade para enviar sugestões ou correções de erros por meio de pull requests ou issues no repositório..
